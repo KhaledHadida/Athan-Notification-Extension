@@ -1,0 +1,20 @@
+{
+    "name": "Athan Notifier",
+    "description": "Notifies user for Athan times.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons":{
+        "48": "/assets/mosque.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "/assets/mosque.png"
+        }
+    },
+    "permissions": ["notifications","storage"],
+    "background": {
+        "service_worker": "background.js"
+      }
+    
+}

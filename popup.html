@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<a href="https://www.flaticon.com/free-icons/mosque" title="mosque icons">Mosque icons created by nawicon - Flaticon</a>-->
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: aliceblue;
+            font-size: large;
+            height: 500px;
+
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+        }
+
+        header img {
+            margin: 0 0 9px 0;
+            padding: 5px;
+        }
+        .form{
+            text-align: center;
+        }
+        #error{
+            margin: 2px;
+            color: red;
+            text-align: center;
+        }
+
+        input[id="country"],
+        input[id="city"] {
+            width: 75px;
+        }
+
+        h1,
+        .nextAthan {
+            text-align: center;
+        }
+
+        .nextAthan {
+            padding: 0 0 5px 0;
+        }
+        #date{
+            margin: 0;
+            font-weight: bold;
+        }
+
+
+        .container {
+            width: 250px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+
+        }
+
+        .container,
+        footer {
+            padding: 0 25px;
+        }
+
+        .prayer,
+        .time {
+            background-color: white;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #quote {
+            font-style: italic;
+            border: 1px solid gray;
+            box-shadow: 5px 5px 5px gray;
+            padding: 5px;
+            margin: 0;
+        }
+
+        #source {
+            text-align: right;
+            font-weight: bold;
+            padding: 0 0 5px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="/assets/mosque.png" width="50px" height="50px" alt="Mosque Image">
+        <h1>Athan</h1>
+        <img src="/assets/mosque.png" width="50px" height="50px" alt="Mosque Image">
+    </header>
+    <div class="form">
+        <input type="text" id="country" name="country" placeholder="Country">
+        <input type="text" id="city" name="city" placeholder="City">
+        <button id="submit">Submit</button>
+    </div>
+        <p id="error"></p>
+    <div class="nextAthan">
+        <!--<p id="date">December 29, 2022</p>-->
+        <span>Next Athan: </span>
+        <span id="nextAthan">Calculating..</span>
+    </div>
+    <div class="container">
+        <!--Flexgrid all athans-->
+        <div class="prayer">
+            Fajr
+        </div>
+        <div class="time" id="fajr">
+        </div>
+        <div class="prayer">
+            Duhur
+        </div>
+        <div class="time" id="dhuhr">
+        </div>
+        <div class="prayer">
+            Asr
+        </div>
+        <div class="time" id="asr">
+        </div>
+        <div class="prayer">
+            Maghrib
+        </div>
+        <div class="time" id="maghrib">
+        </div>
+        <div class="prayer">
+            Isha
+        </div>
+        <div class="time" id="isha">
+        </div>
+    </div>
+    <footer>
+        <p>Your daily hadeeth</p>
+        <p id="quote">“Those people who show no mercy will receive no mercy from Allah.”</p>
+        <p id="source">&mdash;[Muslim, Al-Fada’il]</p>
+    </footer>
+    <script src="popup.js"></script>
+</body>
+
+</html>
